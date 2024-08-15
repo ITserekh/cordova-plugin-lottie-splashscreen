@@ -121,7 +121,7 @@ import Lottie
         let backgroundColor = getUIModeDependentPreference(basePreferenceName: "LottieBackgroundColor", defaultValue: "#ffffff")
 
         animationViewContainer?.autoresizingMask = [
-            .flexibleWidth, .flexibleHeight, .flexibleTopMargin, .flexibleLeftMargin, .flexibleBottomMargin, .flexibleRightMargin
+            .flexibleWidth, .flexibleHeight
         ]
         animationViewContainer?.backgroundColor = UIColor(hex: backgroundColor)
     }

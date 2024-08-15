@@ -4,3 +4,4 @@ platforms/
 plugins/
 yarn-error.log
 lottie-smoke-test/
+.idea
