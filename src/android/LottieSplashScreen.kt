@@ -189,14 +189,22 @@ class LottieSplashScreen : CordovaPlugin() {
                             else -> "asset_$animationLocation"
                         },
                     )
-                animationView.imageAssetsFolder =
-                    preferences.getString(
-                        "LottieImagesLocation",
-                        animationLocation.substring(
-                            0,
-                            animationLocation.lastIndexOf('/'),
-                        ),
-                    )
+                if (animationLocation.lastIndexOf('/') > -1) {
+                    animationView.imageAssetsFolder =
+                        preferences.getString(
+                            "LottieImagesLocation",
+                            animationLocation.substring(
+                                0,
+                                animationLocation.lastIndexOf('/'),
+                            ),
+                        )
+                } else {
+                    animationView.imageAssetsFolder =
+                        preferences.getString(
+                            "LottieImagesLocation",
+                            animationLocation,
+                        )
+                }
             }
         }
 
